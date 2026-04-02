@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Child Support Consultant • Melbourne, Australia",
+    "name": "Simon Bacon",
+    "subtitle": "35+ years dedicated to child support",
+    "description": "One of Australia's most experienced child support practitioners. Published author, former Legal Aid Queensland principal, and recognised authority in child support law and advisory services.",
+    "ctaText": "Get in Touch",
+    "ctaLink": "/contact"
+  },
+  "about": {
+    "paragraphs": [
+      "Simon Bacon has spent his entire professional career in child support — a field he entered after graduating from the University of Melbourne Law School and discovering that few practitioners understood its complexities.",
+      "That early insight shaped a career spanning more than three decades. As Principal Lawyer at Legal Aid Queensland's child support division, Simon built deep expertise in the legislative framework, administrative processes, and practical realities that govern how child support operates in Australia.",
+      "After establishing his Melbourne-based practice at Normanby Chambers, Simon became known as one of the country's leading authorities in child support matters. His client base extends across every Australian state and territory, with parents, accountants, and other professionals seeking his guidance on complex assessment, agreement, and enforcement issues.",
+      "In 2025, Simon transitioned to an advisory model — providing the same depth of specialist guidance through administrative channels at a fraction of traditional legal costs. This reflects a practical reality: most child support matters are resolved through reviews, agreements, and agency processes, not courtrooms."
+    ],
+    "imageCaption": "At Normanby Chambers, Melbourne"
+  },
+  "contact": {
+    "phone": "0423 778 728",
+    "phoneLink": "+61423778728",
+    "email": "simon@simonbacon.com.au",
+    "office": "Normanby Chambers\n430 Little Collins Street\nMelbourne VIC 3000",
+    "hours": "Monday – Friday\n9:00am – 5:00pm",
+    "consultations": "Phone and video consultations available for clients throughout Australia. Your initial consultation is free and without obligation.",
+    "formAction": "https://formsubmit.co/simon@manbyscott.com",
+    "pageSubtitle": "Free initial consultation • Australia-wide service"
+  },
+  "footer": {
+    "copyright": "© 2026 Simon Bacon. All rights reserved.",
+    "disclaimer": "Information on this website is general in nature and does not constitute legal advice."
+  },
+  "seo": {
+    "title": "Simon Bacon | Child Support Consultant & Advisory Expert | Melbourne",
+    "description": "Simon Bacon — over 35 years specialising in child support advisory services in Australia. Published author, former Legal Aid principal, and recognised expert in child support law."
+  }
+}

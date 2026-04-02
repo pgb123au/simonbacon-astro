@@ -1,0 +1,80 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+}
+
+const { title, description, canonical = 'https://simonbacon.com.au/', ogType = 'website' } = Astro.props;
+
+import siteData from '../../content/site.json';
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+
+  <meta property="og:type" content={ogType}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:locale" content="en_AU">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231E1E2E'/><text x='16' y='22' text-anchor='middle' fill='%23C9A96E' font-family='Georgia' font-size='18' font-weight='bold'>S</text></svg>">
+
+  <slot name="head" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">Simon Bacon</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#career">Career</a></li>
+        <li><a href="/#expertise">Expertise</a></li>
+        <li><a href="/#media">Media</a></li>
+        <li><a href="/publications">Publications</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer class="site-footer">
+    <p>{siteData.footer.copyright}</p>
+    <p style="margin-top: 0.5rem;">{siteData.footer.disclaimer}</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', function() {
+          links.classList.toggle('open');
+        });
+        links.querySelectorAll('a').forEach(function(item) {
+          item.addEventListener('click', function() {
+            links.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import pubData from '../../content/publications.json';
+---
+<Layout
+  title="Publications & Media | Simon Bacon"
+  description="Published works, peer-reviewed articles, podcast appearances, and media features by Simon Bacon — Australia's leading child support consultant."
+  canonical="https://simonbacon.com.au/publications"
+>
+  <div class="page-header">
+    <h1>Publications & Media</h1>
+    <p>Peer-reviewed articles, textbooks, and media appearances</p>
+  </div>
+
+  <!-- Family Law Review -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Family Law Review (Thomson Reuters)</h2>
+      <p class="section-subtitle">{pubData.familyLawReview.description}</p>
+      <ul class="pub-list">
+        {pubData.familyLawReview.articles.map((a: { year: string; title: string; journal: string }) => (
+          <li>
+            <span class="pub-year">{a.year}</span>
+            <div>
+              <div class="pub-title">{a.title}</div>
+              <div class="pub-journal">{a.journal}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Law Institute Journal -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Law Institute Journal</h2>
+      <ul class="pub-list">
+        {pubData.lawInstituteJournal.articles.map((a: { year: string; title: string; journal: string; description: string }) => (
+          <li>
+            <span class="pub-year">{a.year}</span>
+            <div>
+              <div class="pub-title">{a.title}</div>
+              <div class="pub-journal">{a.journal}</div>
+              <p style="color: var(--color-gray); font-size: 0.9rem; margin-top: 0.5rem;">{a.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Podcasts -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Podcast Appearances</h2>
+      <p class="section-subtitle">{pubData.podcasts.description}</p>
+      <div class="media-grid">
+        {pubData.podcasts.episodes.map((ep: { title: string; description: string; link: string }) => (
+          <a href={ep.link} class="media-card" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="media-source">Tax Talks</div>
+            <div class="media-title">{ep.title}</div>
+            <div class="media-desc">{ep.description}</div>
+            <span class="media-link">Listen →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">News Coverage</h2>
+      <div class="media-grid">
+        {pubData.news.map((n: { source: string; title: string; description: string; link: string }) => (
+          <a href={n.link} class="media-card" target="_blank" rel="noopener" style="text-decoration:none;">
+            <div class="media-source">{n.source}</div>
+            <div class="media-title">{n.title}</div>
+            <div class="media-desc">{n.description}</div>
+            <span class="media-link">Read article →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Back -->
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <a href="/" class="hero-cta" style="margin-right: 1rem;">← Back to Profile</a>
+      <a href="/contact" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>

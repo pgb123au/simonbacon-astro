@@ -1,0 +1,32 @@
+{
+  "familyLawReview": {
+    "description": "Simon Bacon served as Child Support Editor for the Family Law Review, published by Thomson Reuters, contributing peer-reviewed articles on the complexities of the child support system.",
+    "articles": [
+      { "year": "2019", "title": "The Substitution Order in Child Support Litigation", "journal": "Family Law Review, Vol 8, No 1 — Analysis of Godwin v Glass [2017] FCCA 1695" },
+      { "year": "2018", "title": "The Child Support Registrar Appearing Amicus Curiae", "journal": "Family Law Review, Vol 7, No 3" },
+      { "year": "2017", "title": "Pre-emptive declaratory orders and the enforcement of child support", "journal": "Family Law Review, Vol 7, No 2 — Discussing CGU Insurance Ltd v Blakeley and child support enforcement" },
+      { "year": "2017", "title": "Child support and the autochthonous expedient", "journal": "Family Law Review, Vol 7, No 1" },
+      { "year": "2016", "title": "The fog of overseas child support", "journal": "Family Law Review, Vol 6, No 1 — Examining Child Support Registrar v Higgins [2016] FamCAFC 2 regarding altering overseas liabilities" }
+    ]
+  },
+  "lawInstituteJournal": {
+    "articles": [
+      { "year": "2005", "title": "Depreciation and child support", "journal": "Law Institute Journal, Vol 79, No 9 (September 2005)", "description": "Examines how business depreciation expenses are regularly challenged under section 117(2)(c)(i) of the Child Support (Assessment) Act 1989, discussing the diversity of opinion in the then-Federal Magistrates Court regarding how to handle depreciation expenses when determining child support." }
+    ]
+  },
+  "podcasts": {
+    "description": "Featured guest on Tax Talks — Australia's leading tax education podcast.",
+    "episodes": [
+      { "title": "Child Support Payments", "description": "An overview of how child support payments work in Australia, the assessment formula, and common issues parents face.", "link": "https://www.taxtalks.com.au/child-support-payments/" },
+      { "title": "PSI in Child Support Assessments", "description": "How Personal Services Income rules affect child support assessments for contractors and professionals operating through entities.", "link": "https://www.taxtalks.com.au/psi-in-child-support-assessments/" },
+      { "title": "Child Maintenance Trust", "description": "The role of trusts in child support arrangements and how they interact with assessment rules and tax obligations.", "link": "https://www.taxtalks.com.au/guest/simon-bacon/" },
+      { "title": "Non-Agency Payments", "description": "Understanding when direct payments to the other parent or third parties can be credited against a child support liability.", "link": "https://www.taxtalks.com.au/guest/simon-bacon/" },
+      { "title": "Child Support Lump Sum Payments", "description": "How lump-sum payments — including property transfers — can be structured within binding child support agreements.", "link": "https://www.taxtalks.com.au/guest/simon-bacon/" },
+      { "title": "Child Support Subpoena", "description": "The use of subpoenas in child support proceedings and what information can be compelled from third parties.", "link": "https://www.taxtalks.com.au/guest/simon-bacon/" }
+    ]
+  },
+  "news": [
+    { "source": "North West City News", "title": "Leaders in Family and Child Support Law in Melbourne", "description": "Feature article recognising Simon Bacon as one of Australia's eminent practitioners in child support, covering his career, expertise, and contributions to the field.", "link": "https://www.northwestcitynews.com.au/leaders-in-family-and-child-support-law/" },
+    { "source": "Herald Sun", "title": "Men seek proof of paternity before paying up", "description": "Simon Bacon featured as an expert in this Herald Sun article on paternity testing and child support obligations in Australia.", "link": "https://www.heraldsun.com.au/news/men-seek-proof-of-paternity-before-paying-up/news-story/00643cbaefdfabdcbd04e6e16c1f54d2" }
+  ]
+}

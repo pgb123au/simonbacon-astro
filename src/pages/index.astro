@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+import careerData from '../../content/career.json';
+import expertiseData from '../../content/expertise.json';
+import mediaData from '../../content/media.json';
+---
+<Layout title={siteData.seo.title} description={siteData.seo.description} ogType="profile">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://simonbacon.com.au/#person",
+        "name": siteData.hero.name,
+        "jobTitle": "Child Support Consultant",
+        "description": siteData.seo.description,
+        "url": "https://simonbacon.com.au",
+        "telephone": siteData.contact.phoneLink,
+        "email": siteData.contact.email,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "430 Little Collins Street",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "postalCode": "3000",
+          "addressCountry": "AU"
+        },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Melbourne" },
+        "knowsAbout": ["Child Support Law", "Child Support Agreements", "Child Support Assessment", "Family Law", "Administrative Law"]
+      }
+    })} />
+  </Fragment>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">{siteData.hero.eyebrow}</p>
+      <h1>{siteData.hero.name}</h1>
+      <p class="hero-subtitle">{siteData.hero.subtitle}</p>
+      <div style="margin: 2rem auto; width: 160px; height: 160px; border-radius: 50%; overflow: hidden; border: 3px solid var(--color-gold); box-shadow: 0 0 40px rgba(201,169,110,0.3);">
+        <img src="/images/simon-bacon-headshot.jpg" alt="Simon Bacon" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <p class="hero-desc">{siteData.hero.description}</p>
+      <a href={siteData.hero.ctaLink} class="hero-cta">{siteData.hero.ctaText}</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section-inner about-grid">
+      <div>
+        <div class="gold-line"></div>
+        <h2 class="section-title">About</h2>
+        <div class="bio-content">
+          {siteData.about.paragraphs.map((p: string) => <p>{p}</p>)}
+        </div>
+      </div>
+      <div>
+        <img src="/images/simon-bacon-office.jpg" alt="Simon Bacon at Normanby Chambers">
+        <p>{siteData.about.imageCaption}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Timeline -->
+  <section class="section section-alt" id="career">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Career</h2>
+      <p class="section-subtitle">{careerData.subtitle}</p>
+      <div class="timeline">
+        {careerData.items.map((item: { year: string; title: string; description: string }) => (
+          <div class="timeline-item">
+            <div class="timeline-year">{item.year}</div>
+            <div class="timeline-title">{item.title}</div>
+            <div class="timeline-desc">{item.description}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="section" id="expertise">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Areas of Expertise</h2>
+      <p class="section-subtitle">{expertiseData.subtitle}</p>
+      <div class="expertise-grid">
+        {expertiseData.items.map((item: { title: string; description: string }) => (
+          <div class="expertise-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Media -->
+  <section class="section section-alt" id="media">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Media & Features</h2>
+      <p class="section-subtitle">{mediaData.subtitle}</p>
+      <div class="media-grid">
+        {mediaData.items.map((item: { source: string; title: string; description: string; link: string; linkText: string }) => (
+          <div class="media-card">
+            <div class="media-source">{item.source}</div>
+            <div class="media-title">{item.title}</div>
+            <div class="media-desc">{item.description}</div>
+            {item.link && <a href={item.link} class="media-link" target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'noopener' : undefined}>{item.linkText}</a>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <div class="gold-line" style="margin-left: auto; margin-right: auto;"></div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p style="color: var(--color-gray); max-width: 500px; margin: 0 auto 2rem; font-size: 1.05rem;">
+        For enquiries about child support advisory services, please reach out directly.
+      </p>
+      <a href="/contact" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>

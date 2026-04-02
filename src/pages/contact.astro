@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+---
+<Layout
+  title="Contact Simon Bacon | Child Support Advisory"
+  description="Contact Simon Bacon for child support advisory services. Free initial consultation available. Melbourne-based, Australia-wide service."
+  canonical="https://simonbacon.com.au/contact"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Simon Bacon",
+      "url": "https://simonbacon.com.au/contact",
+      "mainEntity": { "@id": "https://simonbacon.com.au/#person" }
+    })} />
+  </Fragment>
+
+  <div class="page-header">
+    <h1>Contact</h1>
+    <p>{siteData.contact.pageSubtitle}</p>
+  </div>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div>
+          <div class="gold-line"></div>
+          <h2 class="section-title" style="font-size: 1.8rem;">Send an Enquiry</h2>
+          <p style="color: var(--color-gray); margin-bottom: 2rem;">All enquiries are treated confidentially. Your first consultation is free.</p>
+
+          <form action={siteData.contact.formAction} method="POST">
+            <input type="hidden" name="_subject" value="New enquiry from simonbacon.com.au">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://simonbacon.com.au/contact?sent=1">
+
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Please provide a brief overview of your enquiry."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+
+        <div>
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="/images/simon-bacon-portrait.jpg" alt="Simon Bacon" style="width: 180px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 0 auto;">
+          </div>
+          <div class="contact-info">
+            <h3>Contact Details</h3>
+            <div class="contact-detail">
+              <div class="contact-detail-label">Phone</div>
+              <div class="contact-detail-value"><a href={`tel:${siteData.contact.phoneLink}`}>{siteData.contact.phone}</a></div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-label">Email</div>
+              <div class="contact-detail-value"><a href={`mailto:${siteData.contact.email}`}>{siteData.contact.email}</a></div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-label">Office</div>
+              <div class="contact-detail-value" set:html={siteData.contact.office.replace(/\n/g, '<br>')} />
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-label">Hours</div>
+              <div class="contact-detail-value" set:html={siteData.contact.hours.replace(/\n/g, '<br>')} />
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-label">Consultations</div>
+              <div class="contact-detail-value">{siteData.contact.consultations}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
