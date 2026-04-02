@@ -60,6 +60,7 @@ import siteData from '../../content/site.json';
     <p style="margin-top: 0.5rem;">{siteData.footer.disclaimer}</p>
   </footer>
 
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var toggle = document.getElementById('navToggle');
@@ -75,6 +76,16 @@ import siteData from '../../content/site.json';
         });
       }
     });
+    // Redirect to /admin/ after Netlify Identity login
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function(user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function() {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
   </script>
 </body>
 </html>

@@ -1,0 +1,146 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "site-settings"
+        label: "Site Settings & Content"
+        file: "content/site.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow Text", name: "eyebrow", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Text", name: "ctaText", widget: "string" }
+              - { label: "Button Link", name: "ctaLink", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image Caption", name: "imageCaption", widget: "string" }
+          - label: "Contact Details"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Phone Link (tel: format)", name: "phoneLink", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Office Address", name: "office", widget: "text" }
+              - { label: "Hours", name: "hours", widget: "text" }
+              - { label: "Consultations Text", name: "consultations", widget: "text" }
+              - { label: "Form Action URL", name: "formAction", widget: "string" }
+              - { label: "Page Subtitle", name: "pageSubtitle", widget: "string" }
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "Disclaimer", name: "disclaimer", widget: "string" }
+
+      - name: "career"
+        label: "Career Timeline"
+        file: "content/career.json"
+        fields:
+          - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+          - label: "Timeline Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Year / Period", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - name: "expertise"
+        label: "Areas of Expertise"
+        file: "content/expertise.json"
+        fields:
+          - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+          - label: "Expertise Cards"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - name: "media"
+        label: "Media & Features"
+        file: "content/media.json"
+        fields:
+          - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+          - label: "Media Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Source", name: "source", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link URL", name: "link", widget: "string", required: false }
+              - { label: "Link Text", name: "linkText", widget: "string", required: false }
+
+      - name: "publications"
+        label: "Publications"
+        file: "content/publications.json"
+        fields:
+          - label: "Family Law Review"
+            name: "familyLawReview"
+            widget: "object"
+            fields:
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Articles"
+                name: "articles"
+                widget: "list"
+                fields:
+                  - { label: "Year", name: "year", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Journal Reference", name: "journal", widget: "string" }
+          - label: "Law Institute Journal"
+            name: "lawInstituteJournal"
+            widget: "object"
+            fields:
+              - label: "Articles"
+                name: "articles"
+                widget: "list"
+                fields:
+                  - { label: "Year", name: "year", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Journal Reference", name: "journal", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "Podcast Appearances"
+            name: "podcasts"
+            widget: "object"
+            fields:
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Episodes"
+                name: "episodes"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Link URL", name: "link", widget: "string" }
+          - label: "News Coverage"
+            name: "news"
+            widget: "list"
+            fields:
+              - { label: "Source", name: "source", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link URL", name: "link", widget: "string" }
