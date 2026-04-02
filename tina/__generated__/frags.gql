@@ -1,0 +1,113 @@
+fragment SiteParts on Site {
+  __typename
+  hero {
+    __typename
+    eyebrow
+    name
+    subtitle
+    description
+    ctaText
+    ctaLink
+  }
+  about {
+    __typename
+    paragraphs
+    imageCaption
+  }
+  contact {
+    __typename
+    phone
+    phoneLink
+    email
+    office
+    hours
+    consultations
+    formAction
+    pageSubtitle
+  }
+  seo {
+    __typename
+    title
+    description
+  }
+  footer {
+    __typename
+    copyright
+    disclaimer
+  }
+}
+
+fragment CareerParts on Career {
+  __typename
+  subtitle
+  items {
+    __typename
+    year
+    title
+    description
+  }
+}
+
+fragment ExpertiseParts on Expertise {
+  __typename
+  subtitle
+  items {
+    __typename
+    title
+    description
+  }
+}
+
+fragment MediaParts on Media {
+  __typename
+  subtitle
+  items {
+    __typename
+    source
+    title
+    description
+    link
+    linkText
+  }
+}
+
+fragment PublicationsParts on Publications {
+  __typename
+  familyLawReview {
+    __typename
+    description
+    articles {
+      __typename
+      year
+      title
+      journal
+    }
+  }
+  lawInstituteJournal {
+    __typename
+    articles {
+      __typename
+      year
+      title
+      journal
+      description
+    }
+  }
+  podcasts {
+    __typename
+    description
+    episodes {
+      __typename
+      title
+      description
+      link
+    }
+  }
+  news {
+    __typename
+    source
+    title
+    description
+    link
+  }
+}

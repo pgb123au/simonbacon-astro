@@ -26,6 +26,4 @@ pnpm-debug.log*
 .vercel
 
 # TinaCMS generated
-/tina/__generated__/
-/.tina/__generated__/
 .env*.local
