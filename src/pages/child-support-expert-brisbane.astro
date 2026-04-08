@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+
+const title = "Child Support Expert for Brisbane & Queensland — Simon Bacon";
+const description = "Expert child support advisory for Brisbane and Queensland families. Former Principal Lawyer at Legal Aid Queensland's child support division. 35+ years experience.";
+---
+<Layout title={title} description={description} canonical="https://simonbacon.com.au/child-support-expert-brisbane/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Simon Bacon — Child Support Expert (Brisbane & Queensland)",
+      "description": description,
+      "url": "https://simonbacon.com.au/child-support-expert-brisbane/",
+      "telephone": siteData.contact.phoneLink,
+      "email": siteData.contact.email,
+      "areaServed": [
+        { "@type": "City", "name": "Brisbane" },
+        { "@type": "State", "name": "Queensland" }
+      ],
+      "provider": { "@id": "https://simonbacon.com.au/#person" }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Simon Bacon's connection to Queensland?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simon served as Principal Lawyer at Legal Aid Queensland's dedicated child support division before establishing his Melbourne-based practice. This gives him insider knowledge of how the government system processes child support matters — experience that directly benefits Queensland families seeking his advisory services today."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Simon help with child support in regional Queensland?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Phone and video consultations mean Simon's services are accessible from anywhere in Queensland — Brisbane, Gold Coast, Sunshine Coast, Townsville, Cairns, Toowoomba, or any regional centre. Child support is federal law, so the same rules apply everywhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do Brisbane child support costs compare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brisbane family lawyers typically charge $350–$550 per hour for child support matters. Simon's advisory service operates at approximately one-third of traditional legal fees, with 35+ years of exclusive child support specialisation that general family lawyers rarely match."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <p style="font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 1rem;">
+      <a href="/" style="color: rgba(255,255,255,0.5);">Home</a> / Child Support Expert Brisbane
+    </p>
+    <h1>Child Support Expert for Brisbane</h1>
+    <p>Former Legal Aid Queensland leader — now advising Brisbane families privately</p>
+  </div>
+
+  <!-- Queensland Background -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">A Queensland Insider's Perspective</h2>
+      <div class="bio-content">
+        <p>
+          Before building his Melbourne-based advisory practice, Simon Bacon spent formative years as <strong>Principal Lawyer of Legal Aid Queensland's child support division</strong>. During that time, he didn't just advise clients — he worked within the system, understanding how Services Australia processes claims, makes decisions, and responds to challenges.
+        </p>
+        <p>
+          That insider perspective is rare among child support practitioners. Most lawyers experience the system only from the outside — lodging applications and waiting for responses. Simon understands the internal decision-making framework, the factors that influence assessors, and the arguments that carry the most weight at each stage of review.
+        </p>
+        <p>
+          For Brisbane and Queensland families, this means advice from someone who has deep roots in the Queensland legal community and an intimate understanding of how the federal child support system operates — both from government and private practice perspectives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Queensland Coverage -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Serving All of Queensland</h2>
+      <p class="section-subtitle">Phone and video consultations available from anywhere in the state</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>Brisbane CBD & Metro</h3>
+          <p>Families in Brisbane, Ipswich, Logan, Redlands, and Moreton Bay. The Federal Circuit Court Brisbane registry is at 119 North Quay for matters that reach court.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Gold Coast</h3>
+          <p>One of Queensland's fastest-growing regions with significant demand for child support services. Remote advisory means no travel to Brisbane needed.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Sunshine Coast</h3>
+          <p>Families from Caloundra to Noosa. The same federal rules apply — specialist expertise delivered via phone or video consultation.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Townsville & North QLD</h3>
+          <p>Regional families often have fewer local options for specialist child support advice. Remote advisory bridges that gap with 35+ years of expertise.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Cairns & Far North</h3>
+          <p>International child support cases can be more common in Far North Queensland due to proximity to Asia-Pacific nations — an area of published expertise.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Toowoomba & Darling Downs</h3>
+          <p>Regional centres with limited access to specialist family law services. Phone and video make expert advisory accessible from anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Services for Queensland Families</h2>
+      <p class="section-subtitle">The same expert advisory offered to Melbourne clients, available remotely</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>Assessment Reviews</h3>
+          <p>Challenge unfair assessments through Change of Assessment applications. We prepare evidence and submissions tailored to the specific COA grounds.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Binding Agreements</h3>
+          <p>Draft or review binding and limited child support agreements. Both types can be registered with Services Australia without court involvement.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Debt & Enforcement</h3>
+          <p>Navigate collection options for unpaid support or defend against enforcement action. Understand Services Australia's powers and your options.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Objections & Tribunal</h3>
+          <p>Prepare formal objections to Services Australia decisions and, if needed, submissions for the Administrative Review Tribunal.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Overseas Matters</h3>
+          <p>International child support cases. Simon's published article "The fog of overseas child support" (2016) demonstrates deep expertise in this complex area.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Tax & Child Support</h3>
+          <p>Maintenance trusts, non-agency payments, PSI rules. As featured on the Tax Talks podcast — expert guidance on the intersection of tax and child support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Queensland Resources -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Brisbane & Queensland Resources</h2>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-source">Court</div>
+          <div class="media-title">Federal Circuit & Family Court — Brisbane</div>
+          <div class="media-desc">119 North Quay (corner of Tank Street), Brisbane QLD 4000. For matters that cannot be resolved through administrative channels.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Legal Aid</div>
+          <div class="media-title">Legal Aid Queensland</div>
+          <div class="media-desc">44 Herschel Street, Brisbane QLD 4000. Free legal help for eligible Queenslanders. Also has offices in Southport, Townsville, Cairns, and other regional centres.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Commission</div>
+          <div class="media-title">QLD Family & Child Commission</div>
+          <div class="media-desc">Independent statutory body focused on child safety and wellbeing in Queensland. Provides information and advocacy for families.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Federal</div>
+          <div class="media-title">Services Australia (Child Support)</div>
+          <div class="media-desc">Phone: 131 272. National service for all assessments, collections, reviews, and enforcement — the same service regardless of state.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div style="max-width: 720px;">
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">What is Simon's connection to Queensland?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Simon served as Principal Lawyer at Legal Aid Queensland's dedicated child support division. This gave him insider knowledge of how the government system processes child support matters — experience that directly benefits Queensland families today.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Can Simon help families in regional Queensland?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Absolutely. Phone and video consultations are available from anywhere in Queensland — Brisbane, Gold Coast, Sunshine Coast, Townsville, Cairns, Toowoomba, or any regional centre. Child support is federal law, so the same rules apply everywhere in Australia.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">How do costs compare to a Brisbane family lawyer?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Brisbane family lawyers typically charge $350–$550/hr. Simon's advisory fees are roughly one-third of those rates, with 35+ years of exclusively child support experience. For a typical matter, the savings can amount to several thousand dollars.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <div class="gold-line" style="margin-left: auto; margin-right: auto;"></div>
+      <h2 class="section-title">Get Expert Child Support Advice in Queensland</h2>
+      <p style="color: var(--color-gray); max-width: 550px; margin: 0 auto 2rem; font-size: 1.05rem;">
+        From a former Legal Aid Queensland leader. Free initial consultation — phone or video.
+      </p>
+      <a href="/contact" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>

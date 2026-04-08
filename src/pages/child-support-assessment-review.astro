@@ -1,0 +1,258 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+
+const title = "Child Support Assessment Reviews — Fight Unfair Assessments";
+const description = "Expert help challenging unfair child support assessments. Change of Assessment applications, objections, and tribunal appeals. 35+ years experience, published authority.";
+---
+<Layout title={title} description={description} canonical="https://simonbacon.com.au/child-support-assessment-review/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Simon Bacon — Child Support Assessment Review Expert",
+      "description": description,
+      "url": "https://simonbacon.com.au/child-support-assessment-review/",
+      "telephone": siteData.contact.phoneLink,
+      "email": siteData.contact.email,
+      "areaServed": { "@type": "Country", "name": "Australia" },
+      "provider": { "@id": "https://simonbacon.com.au/#person" }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I challenge a child support assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You have several options: apply for a Change of Assessment (COA) through Services Australia, lodge a formal objection within 28 days (or 90 days for assessment decisions), or appeal to the Administrative Review Tribunal. The right path depends on your specific circumstances and the grounds available to you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the grounds for a Change of Assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are 10 specific grounds ('reasons') including: high costs of contact with your children, special needs of a child, necessary commitments to support yourself or others, income not reflecting earning capacity, and property/financial resources not reflected in income. A specialist can identify which grounds apply and how to present the evidence most effectively."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens at the Administrative Review Tribunal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ART (formerly SSAT) conducts a full merits review of Services Australia's decision — essentially reassessing the matter from scratch with fresh eyes. You can present evidence, make submissions, and have a specialist prepare your case. The ART is less formal than a court, and legal representation is not required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Has Simon Bacon published on child support assessment topics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Simon has published extensively on assessment-related topics in the Family Law Review, including articles on substitution orders, pre-emptive declaratory orders and enforcement, the role of the Child Support Registrar appearing amicus curiae, and overseas child support assessments. This published expertise demonstrates the depth of knowledge he brings to assessment review matters."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <p style="font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 1rem;">
+      <a href="/" style="color: rgba(255,255,255,0.5);">Home</a> / Assessment Reviews
+    </p>
+    <h1>Child Support Assessment Reviews</h1>
+    <p>Expert guidance on challenging unfair assessments — published authority in the field</p>
+  </div>
+
+  <!-- The Problem -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">When the Formula Gets It Wrong</h2>
+      <div class="bio-content">
+        <p>
+          The child support formula is designed to produce a fair result in typical circumstances. But circumstances are rarely typical. The formula uses a standardised calculation based on income, care percentages, and the number and ages of children — and it doesn't account for the real-world complexity of most families' situations.
+        </p>
+        <p>
+          You might be paying for expensive travel to see your children. One of your children might have a disability requiring significant additional expense. The other parent might be deliberately earning below their capacity. You might have other dependents — a new partner's children, elderly parents — who aren't captured by the formula.
+        </p>
+        <p>
+          When the formula produces an unjust result, the law provides pathways to challenge it. <strong>But the outcome depends heavily on how well the application is prepared.</strong> A Change of Assessment (COA) application isn't just about telling your story — it's about presenting evidence that meets specific legal criteria, structured in a way that gives the decision-maker what they need to depart from the formula.
+        </p>
+        <p>
+          This is where 35+ years of exclusive specialisation makes the difference. Simon Bacon has prepared hundreds of COA applications and knows precisely what works — and what doesn't.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Review Pathway -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Your Options for Challenging an Assessment</h2>
+      <p class="section-subtitle">Three levels of review, each progressively more independent</p>
+
+      <div style="max-width: 720px;">
+        <!-- Step 1 -->
+        <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--color-gold); display: flex; align-items: center; justify-content: center; color: var(--color-black); font-weight: 700; font-size: 1.2rem;">1</div>
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Change of Assessment (COA)</h3>
+            <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Apply to Services Australia to depart from the formula. There are 10 specific grounds. A Services Australia officer will consider your application, the other parent's response, and any supporting evidence. This is the most common and often most effective first step. <strong>No lawyer needed.</strong></p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--color-gold); display: flex; align-items: center; justify-content: center; color: var(--color-black); font-weight: 700; font-size: 1.2rem;">2</div>
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Formal Objection</h3>
+            <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">If the COA decision is unfavourable, you can lodge a formal objection within 28 days (90 days for assessment-related decisions). A different, more senior officer reviews the matter from scratch. Well-written objections with supporting evidence frequently succeed. <strong>No lawyer needed.</strong></p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+          <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--color-gold); display: flex; align-items: center; justify-content: center; color: var(--color-black); font-weight: 700; font-size: 1.2rem;">3</div>
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Administrative Review Tribunal (ART)</h3>
+            <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">The ART (formerly SSAT) conducts a full, independent merits review. It's a fresh assessment by an independent tribunal member, not just a check that Services Australia followed the rules. You can present evidence, make oral submissions, and have a specialist prepare your case. <strong>No lawyer needed</strong>, though specialist preparation significantly improves outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Published Authority -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Published Expertise in Assessment Law</h2>
+      <p class="section-subtitle">Academic contributions that demonstrate depth of knowledge</p>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-year">2019</span>
+          <div>
+            <span class="pub-title">The Substitution Order in Child Support Litigation</span><br>
+            <span class="pub-journal">Family Law Review, Vol 8, No 1</span>
+          </div>
+        </li>
+        <li>
+          <span class="pub-year">2018</span>
+          <div>
+            <span class="pub-title">The Child Support Registrar Appearing Amicus Curiae</span><br>
+            <span class="pub-journal">Family Law Review, Vol 7, No 3</span>
+          </div>
+        </li>
+        <li>
+          <span class="pub-year">2017</span>
+          <div>
+            <span class="pub-title">Pre-emptive declaratory orders and the enforcement of child support</span><br>
+            <span class="pub-journal">Family Law Review, Vol 7, No 2</span>
+          </div>
+        </li>
+        <li>
+          <span class="pub-year">2017</span>
+          <div>
+            <span class="pub-title">Child support and the autochthonous expedient</span><br>
+            <span class="pub-journal">Family Law Review, Vol 7, No 1</span>
+          </div>
+        </li>
+        <li>
+          <span class="pub-year">2016</span>
+          <div>
+            <span class="pub-title">The fog of overseas child support</span><br>
+            <span class="pub-journal">Family Law Review, Vol 6, No 1</span>
+          </div>
+        </li>
+        <li>
+          <span class="pub-year">2005</span>
+          <div>
+            <span class="pub-title">Depreciation and child support</span><br>
+            <span class="pub-journal">Law Institute Journal, Vol 79, No 9</span>
+          </div>
+        </li>
+      </ul>
+      <p style="color: var(--color-gray); font-size: 0.9rem; margin-top: 1.5rem;">
+        These publications demonstrate expertise that goes beyond practical experience — Simon has contributed to the academic understanding of how child support assessment law works. Few practitioners in Australia can match this depth of published authority.
+      </p>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">How We Help with Assessment Reviews</h2>
+      <p class="section-subtitle">Practical, expert guidance at every stage</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>Initial Analysis</h3>
+          <p>We review your current assessment, income details, care arrangements, and the specific facts of your situation. We identify which COA grounds apply and assess the strength of your case.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Evidence Preparation</h3>
+          <p>We help you gather and organise the right evidence — financial documents, care records, receipts, medical reports — presented in the format that Services Australia and the ART expect.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Application Drafting</h3>
+          <p>We draft your COA application, objection, or ART submission. The written document is often the single most important factor in the outcome — clear, evidence-based arguments structured around the specific legal criteria.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Process Guidance</h3>
+          <p>We guide you through each step — what to expect from Services Australia, how the conference process works, what happens at the ART, and how to respond to the other parent's submissions.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Tribunal Preparation</h3>
+          <p>If your matter goes to the Administrative Review Tribunal, we prepare comprehensive submissions, organise evidence, and coach you on presenting your case effectively.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Cost-Effective</h3>
+          <p>Advisory fees are typically one-third of what a family lawyer would charge for the same work. For assessment reviews — which are administrative, not court-based — this represents significant savings with equivalent or greater expertise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div style="max-width: 720px;">
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">How do I challenge a child support assessment?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">The most common path is a Change of Assessment (COA) application through Services Australia. If that's unsuccessful, you can lodge a formal objection (28–90 days), then appeal to the Administrative Review Tribunal. Each stage is administrative — no lawyer required — but specialist preparation significantly improves outcomes.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">What are the grounds for a Change of Assessment?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">There are 10 specific grounds: high costs of contact, special needs of a child, high costs of caring for other children, necessary self-support commitments, necessary commitments to support others, high child care costs (payee), substantially reduced support (payee), income not reflecting capacity, property/financial resources, and other special circumstances.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">How long does an assessment review take?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">A COA application typically takes 6–12 weeks for a decision. Objections are usually decided within 60 days. ART matters can take 3–6 months from lodgement to hearing. Timelines vary based on complexity and Services Australia's current workload.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Can the assessment be changed retroactively?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">In some cases, yes. A COA decision can be backdated to the date the application was made (or sometimes earlier). The rules around retrospective changes are complex and depend on the specific ground and circumstances. This is an area where specialist knowledge prevents costly mistakes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <div class="gold-line" style="margin-left: auto; margin-right: auto;"></div>
+      <h2 class="section-title">Challenge Your Assessment with Expert Help</h2>
+      <p style="color: var(--color-gray); max-width: 550px; margin: 0 auto 2rem; font-size: 1.05rem;">
+        Free initial consultation. 35+ years of specialised expertise in child support assessments.
+      </p>
+      <a href="/contact" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+
+const title = "Child Maintenance Advisory — Expert Guidance Without the Legal Fees";
+const description = "Expert child maintenance (child support) advisory services in Australia. Understand your options for agreements, trusts, and assessments. 35+ years specialised experience.";
+---
+<Layout title={title} description={description} canonical="https://simonbacon.com.au/child-maintenance-advisory/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Simon Bacon — Child Maintenance Advisory",
+      "description": description,
+      "url": "https://simonbacon.com.au/child-maintenance-advisory/",
+      "telephone": siteData.contact.phoneLink,
+      "email": siteData.contact.email,
+      "areaServed": { "@type": "Country", "name": "Australia" },
+      "provider": { "@id": "https://simonbacon.com.au/#person" }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between child maintenance and child support in Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Australia, 'child support' is the current legal term. 'Child maintenance' was used before the Child Support Scheme started in 1988 and is still common in the UK. In practice, they refer to the same thing: financial contributions by a parent towards the cost of raising their children after separation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a child maintenance trust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A child maintenance trust is a specific type of trust used in Australian child support for tax and financial planning. When structured correctly, payments into the trust can be credited as non-agency payments against a child support assessment. Simon Bacon has discussed this in detail on the Tax Talks podcast."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a lawyer for a child maintenance agreement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a binding child support agreement, each party must receive independent legal advice — that's a legal requirement. For a limited child support agreement, legal advice is recommended but not mandatory. For either type, a specialist consultant can draft the agreement and explain the implications before you seek the required legal sign-off."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <p style="font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 1rem;">
+      <a href="/" style="color: rgba(255,255,255,0.5);">Home</a> / Child Maintenance Advisory
+    </p>
+    <h1>Child Maintenance Advisory</h1>
+    <p>Expert guidance on maintenance agreements, trusts, and assessments</p>
+  </div>
+
+  <!-- Terminology & Context -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Child Maintenance in Australia — A Clear Guide</h2>
+      <div class="bio-content">
+        <p>
+          "Child maintenance" and "child support" are terms that many Australians use interchangeably — and for good reason. Before the <strong>Child Support Scheme</strong> began in 1988, Australian courts used "maintenance" to describe financial contributions by a non-custodial parent. The new legislation adopted "child support" as the official term, but "maintenance" persists in everyday language and in several specific legal contexts.
+        </p>
+        <p>
+          If you've arrived from the UK, New Zealand, or another country, you're probably used to the term "child maintenance." The Australian system works differently from the UK's Child Maintenance Service, but the underlying concept is the same: ensuring both parents contribute financially to raising their children.
+        </p>
+        <p>
+          One area where "maintenance" retains specific legal significance in Australia is the <strong>child maintenance trust</strong> — a tax-planning structure that, when properly established, can provide significant benefits. This is one of Simon Bacon's particular areas of expertise, as explored across multiple episodes of the Tax Talks podcast.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Concepts -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Key Child Maintenance Concepts</h2>
+      <p class="section-subtitle">Understanding the Australian system, whether you call it maintenance or support</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>Child Maintenance Trusts</h3>
+          <p>A trust structure that allows child support payments to be made into a trust for the child's benefit. When properly set up, payments are credited against the child support assessment. Significant tax advantages are possible — but the trust must meet strict legal requirements. Simon has covered this in detail on Tax Talks.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Non-Agency Payments</h3>
+          <p>Payments made directly to the other parent or to third parties (school fees, medical costs, housing) rather than through Services Australia. These can be credited against your child support assessment — but only if properly documented and within the rules. A common source of disputes.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Lump Sum Payments</h3>
+          <p>A one-off payment to settle child support obligations for a period or permanently. Can provide certainty for both parties but must be structured carefully — through a binding agreement or court order — to avoid being treated as a gift rather than child support.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Binding Agreements</h3>
+          <p>A formal agreement between parents that can set child support above or below the formula amount. Both parties must receive independent legal advice. Once registered with Services Australia, it replaces the formula assessment. Critical to get right — poorly drafted agreements can be challenged.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Limited Agreements</h3>
+          <p>A simpler alternative to a binding agreement — must provide at least the assessed amount, doesn't require legal advice (though it's recommended). Can include provisions for non-agency payments and specific arrangements for school fees, medical costs, and other expenses.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>The Advisory Advantage</h3>
+          <p>Most of these matters — trusts, agreements, non-agency payments — involve administrative processes, not court. A specialist advisory service provides the same expertise as a law firm at typically one-third the cost, because you're paying for knowledge, not courtroom access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tax Talks Connection -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Featured on Tax Talks</h2>
+      <p class="section-subtitle">Simon's expertise at the intersection of tax and child maintenance</p>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-source">Tax Talks Podcast</div>
+          <div class="media-title">Child Support Payments</div>
+          <div class="media-desc">Comprehensive overview of how the child support system works and the financial implications for both parents.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Tax Talks Podcast</div>
+          <div class="media-title">Child Maintenance Trust</div>
+          <div class="media-desc">Detailed exploration of maintenance trusts — when they're appropriate, how to structure them, and the tax benefits.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Tax Talks Podcast</div>
+          <div class="media-title">Non-Agency Payments</div>
+          <div class="media-desc">How to make direct payments that count towards your child support assessment — the rules, limits, and common mistakes.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Tax Talks Podcast</div>
+          <div class="media-title">Lump Sum Payments</div>
+          <div class="media-desc">The mechanics and implications of lump sum child support payments, including tax treatment and agreement requirements.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Tax Talks Podcast</div>
+          <div class="media-title">PSI in Child Support Assessments</div>
+          <div class="media-desc">How Personal Services Income rules affect child support calculations — a technical area where specialist knowledge prevents costly mistakes.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Law Institute Journal</div>
+          <div class="media-title">Depreciation and Child Support</div>
+          <div class="media-desc">Published in 2005 (Vol 79, No 9), one of the first articles examining how depreciation deductions interact with child support assessment.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div style="max-width: 720px;">
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">What is the difference between child maintenance and child support?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">In Australia, "child support" is the official legal term since the 1988 Child Support Scheme. "Child maintenance" was the older term and is still used in the UK. They refer to the same thing. The exception is "child maintenance trust," which has specific legal meaning in Australian tax law.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">What is a child maintenance trust and should I set one up?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">A maintenance trust holds child support payments in trust for the child's benefit. When properly structured, payments are credited against your assessment and can offer tax advantages. Whether it's appropriate depends on your specific circumstances — the amounts involved, the ages of children, and the other parent's agreement. This is an area where specialist advice is essential.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Do I need a lawyer for a child maintenance agreement?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">For a binding agreement, both parties must receive independent legal advice — that's a legal requirement. However, a specialist consultant can draft the agreement, explain the implications, and prepare you before you seek the required legal sign-off. This is more cost-effective than having a lawyer draft the agreement from scratch at $400–$700/hr.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <div class="gold-line" style="margin-left: auto; margin-right: auto;"></div>
+      <h2 class="section-title">Expert Child Maintenance Advisory</h2>
+      <p style="color: var(--color-gray); max-width: 550px; margin: 0 auto 2rem; font-size: 1.05rem;">
+        Agreements, trusts, assessments, and more. Free initial consultation with 35+ years of expertise.
+      </p>
+      <a href="/contact" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>

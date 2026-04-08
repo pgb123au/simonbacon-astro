@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+
+const title = "Child Support Expert for Sydney Families — Simon Bacon";
+const description = "Expert child support advisory services for Sydney families. Federal system expertise means the same quality of advice, delivered remotely at a fraction of Sydney legal fees.";
+---
+<Layout title={title} description={description} canonical="https://simonbacon.com.au/child-support-expert-sydney/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Simon Bacon — Child Support Expert (Sydney)",
+      "description": description,
+      "url": "https://simonbacon.com.au/child-support-expert-sydney/",
+      "telephone": siteData.contact.phoneLink,
+      "email": siteData.contact.email,
+      "areaServed": { "@type": "City", "name": "Sydney" },
+      "provider": { "@id": "https://simonbacon.com.au/#person" }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can a Melbourne-based child support expert help Sydney families?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Child support in Australia is entirely federal — the same legislation, formulas, and administrative processes apply in Sydney as in Melbourne. Simon Bacon has advised families in every Australian state and territory for over 35 years. Phone and video consultations make his expertise fully accessible to Sydney families."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can I save compared to a Sydney child support lawyer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sydney family lawyers typically charge $450–$700 per hour. Simon's advisory service operates at approximately one-third of traditional legal fees. For a typical child support dispute that might involve 10-20 hours of work, the savings can be substantial — potentially thousands of dollars."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my matter needs to go to court in Sydney?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your matter requires court representation at the Federal Circuit and Family Court in Sydney, Simon will advise you of this and can refer you to an appropriate Sydney family lawyer. He can also prepare background documentation and case summaries from the administrative stages to support your court case."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <p style="font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 1rem;">
+      <a href="/" style="color: rgba(255,255,255,0.5);">Home</a> / Child Support Expert Sydney
+    </p>
+    <h1>Child Support Expert for Sydney</h1>
+    <p>Federal expertise, delivered remotely — at a fraction of Sydney legal fees</p>
+  </div>
+
+  <!-- Why Federal = National -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Why Location Doesn't Matter for Child Support</h2>
+      <div class="bio-content">
+        <p>
+          Unlike property law, criminal law, or even many areas of family law, child support in Australia is <strong>entirely governed by federal legislation</strong>. The Child Support (Assessment) Act 1989 and the Child Support (Registration and Collection) Act 1988 apply uniformly across all states and territories.
+        </p>
+        <p>
+          This means a child support expert based in Melbourne provides the same quality of advice as one in Sydney — because the law, the agency (Services Australia), the assessment formula, and the review processes are identical. What matters is not where the expert is located, but the <strong>depth of their specialisation</strong>.
+        </p>
+        <p>
+          Sydney has Australia's highest legal fees. For child support matters — where the vast majority of disputes are resolved through administrative channels, not courtrooms — engaging a specialist consultant can save Sydney families thousands of dollars compared to local family lawyer rates of $450–$700 per hour.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works for Sydney Families -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">How It Works for Sydney Families</h2>
+      <p class="section-subtitle">Expert child support advisory, without leaving Sydney</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>1. Free Initial Consultation</h3>
+          <p>Discuss your situation by phone or video. Simon will assess your matter, explain your options, and outline likely costs — at no charge.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>2. Expert Analysis</h3>
+          <p>Simon reviews your documentation, analyses the assessment or decision, and identifies the strongest path forward — whether that's a COA application, objection, agreement, or tribunal preparation.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>3. Document Preparation</h3>
+          <p>Comprehensive drafting of applications, submissions, agreements, or other documents. Everything is prepared to the same standard as traditional legal work.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>4. Ongoing Guidance</h3>
+          <p>Phone and email support throughout the process. If your matter progresses to the Administrative Review Tribunal, Simon prepares your case and guides your presentation.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>5. Court Referral (If Needed)</h3>
+          <p>If your matter requires court representation at the Federal Circuit Court in Sydney (Queens Square or Parramatta), Simon will refer you to an appropriate local lawyer and provide case documentation.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Significant Cost Savings</h3>
+          <p>Sydney family lawyers charge $450–$700/hr. Simon's advisory fees are typically one-third of traditional legal rates — with 35+ years of focused expertise that general practitioners can't match.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sydney Resources -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Sydney Child Support Resources</h2>
+      <p class="section-subtitle">Key institutions and services for Sydney families</p>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-source">Court</div>
+          <div class="media-title">Federal Circuit & Family Court — Sydney</div>
+          <div class="media-desc">Queens Square, 184 Phillip Street, Sydney NSW 2000. For contested matters that cannot be resolved administratively.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Court</div>
+          <div class="media-title">Federal Circuit & Family Court — Parramatta</div>
+          <div class="media-desc">1–3 George Street, Parramatta NSW 2150. Western Sydney registry handling the same matters as the CBD court.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Legal Aid</div>
+          <div class="media-title">Legal Aid NSW</div>
+          <div class="media-desc">323 Castlereagh Street, Haymarket NSW 2000. Free legal information and may fund representation for eligible applicants.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Federal</div>
+          <div class="media-title">Services Australia (Child Support)</div>
+          <div class="media-desc">Phone: 131 272. National service handling all assessments, collections, reviews, and enforcement regardless of location.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">Tribunal</div>
+          <div class="media-title">Administrative Review Tribunal — Sydney</div>
+          <div class="media-desc">Sydney registry. Hears appeals from Services Australia child support decisions. Independent merits review — no lawyer required.</div>
+        </div>
+        <div class="media-card">
+          <div class="media-source">NSW</div>
+          <div class="media-title">LawAccess NSW</div>
+          <div class="media-desc">Phone: 1300 888 529. Free legal information service that can help you understand your child support situation and connect you with services.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div style="max-width: 720px;">
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Can a Melbourne-based expert really help with my Sydney child support matter?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Yes. Child support is federal law — identical rules apply in Sydney, Melbourne, Brisbane, and everywhere else in Australia. Simon has advised families in every state and territory. Phone and video consultations make distance irrelevant. What matters is the depth of expertise.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">How much can I save compared to a Sydney family lawyer?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Sydney lawyers typically charge $450–$700/hr. Simon's advisory fees are roughly one-third of that. For a matter involving 10–20 hours of work, the savings can be several thousand dollars — with more focused expertise than most generalist family lawyers offer.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">What if my matter needs to go to court in Sydney?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">If court representation is needed, Simon will advise you clearly and can refer you to an appropriate Sydney family lawyer. He can prepare comprehensive background documentation from the administrative stages to support your court case — saving your lawyer (and you) significant time and money.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <div class="gold-line" style="margin-left: auto; margin-right: auto;"></div>
+      <h2 class="section-title">Get Expert Child Support Advice in Sydney</h2>
+      <p style="color: var(--color-gray); max-width: 500px; margin: 0 auto 2rem; font-size: 1.05rem;">
+        Free initial consultation — phone or video. No Sydney office visit needed.
+      </p>
+      <a href="/contact" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>

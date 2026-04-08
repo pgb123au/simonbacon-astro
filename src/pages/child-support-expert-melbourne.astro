@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+
+const title = "Melbourne's Child Support Expert — Simon Bacon";
+const description = "Simon Bacon is Melbourne's leading child support expert. 35+ years of exclusive specialisation, 8 peer-reviewed articles, and advisory services at a fraction of legal fees.";
+---
+<Layout title={title} description={description} canonical="https://simonbacon.com.au/child-support-expert-melbourne/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://simonbacon.com.au/#person",
+      "name": "Simon Bacon",
+      "jobTitle": "Child Support Consultant",
+      "description": description,
+      "url": "https://simonbacon.com.au/child-support-expert-melbourne/",
+      "telephone": siteData.contact.phoneLink,
+      "email": siteData.contact.email,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Normanby Chambers, 430 Little Collins Street",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "postalCode": "3000",
+        "addressCountry": "AU"
+      },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Melbourne" },
+      "knowsAbout": ["Child Support Law", "Child Support Agreements", "Child Support Assessment", "Family Law", "Administrative Law"],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Child Support Consultant",
+        "occupationLocation": { "@type": "City", "name": "Melbourne" }
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Melbourne's most experienced child support expert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simon Bacon has over 35 years of exclusive specialisation in child support — one of the longest and most focused careers in this field in Australia. Based at Normanby Chambers in Melbourne's CBD, he has published 8 peer-reviewed articles in the Family Law Review and Law Institute Journal, and is a regular guest expert on the Tax Talks podcast."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is a child support expert different from a family lawyer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A child support expert focuses exclusively on child support matters — assessments, agreements, reviews, enforcement, and tribunal proceedings. Most family lawyers handle child support as a small part of a broader practice covering divorce, property, custody, and more. The depth of specialisation means a child support expert understands nuances and strategies that generalist practitioners may miss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What qualifications does Simon Bacon have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simon holds a Bachelor of Laws from the University of Melbourne. He served as Principal Lawyer at Legal Aid Queensland's child support division, was child support editor of the Family Law Review (Thomson Reuters), and has published 8 peer-reviewed articles. He is registered on the High Court's Register of Practitioners and has been quoted in the Herald Sun and featured in North West City News."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <p style="font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 1rem;">
+      <a href="/" style="color: rgba(255,255,255,0.5);">Home</a> / Child Support Expert Melbourne
+    </p>
+    <h1>Melbourne's Child Support Expert</h1>
+    <p>Over 35 years of exclusive specialisation in child support law and administration</p>
+  </div>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">A Career Defined by Specialisation</h2>
+      <div class="bio-content">
+        <p>
+          In a profession where most practitioners spread their expertise across divorce, property, custody, and child support, Simon Bacon made a different choice. After graduating from the University of Melbourne with a Bachelor of Laws, he dedicated his entire career to a single area: <strong>child support</strong>.
+        </p>
+        <p>
+          That decision — made over three decades ago — has produced one of Australia's deepest wells of child support expertise. As Simon has noted: "I found it very interesting, and I found that few lawyers knew about it." That observation remains true today. Child support is complex, highly technical, and constantly evolving — and very few practitioners have the depth of knowledge that comes from 35+ years of exclusive focus.
+        </p>
+        <p>
+          Based at <strong>Normanby Chambers, 430 Little Collins Street</strong> in Melbourne's legal precinct, Simon serves clients across all of Melbourne — from the CBD and inner suburbs to the outer east, west, and south-east corridors — as well as families throughout regional Victoria and across Australia via phone and video.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Published Authority</h2>
+      <p class="section-subtitle">Recognised expertise in child support law, not just practical experience</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>Family Law Review</h3>
+          <p>Served as child support editor for Thomson Reuters' Family Law Review. Published 5 peer-reviewed articles on topics including substitution orders, amicus curiae, pre-emptive declaratory orders, and overseas child support.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Law Institute Journal</h3>
+          <p>Published "Depreciation and child support" (Vol 79, No 9, 2005) in Victoria's premier legal journal — one of the first articles to examine the intersection of depreciation and child support assessment.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Tax Talks Podcast</h3>
+          <p>Regular guest expert on Australia's leading tax podcast, covering child support payments, PSI in assessments, maintenance trusts, non-agency payments, lump sum payments, and subpoenas.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Legal Aid Queensland</h3>
+          <p>Served as Principal Lawyer of Legal Aid Queensland's dedicated child support division — building insider knowledge of how the government system processes child support matters.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Media Recognition</h3>
+          <p>Quoted in the Herald Sun ("Men seek proof of paternity before paying up," 2011) and featured in North West City News as one of Melbourne's leaders in family and child support law.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>University of Melbourne</h3>
+          <p>Bachelor of Laws from one of Australia's oldest and most respected law schools. Registered on the High Court of Australia's Register of Practitioners.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Melbourne Services -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Child Support Services in Melbourne</h2>
+      <p class="section-subtitle">Expert advisory services for Melbourne families — in person or via phone/video</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3>Assessment Reviews</h3>
+          <p>Challenge unfair child support assessments through Change of Assessment (COA) applications. We prepare the evidence, draft submissions, and guide you through the process.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Binding Agreements</h3>
+          <p>Draft or review binding and limited child support agreements. Ensure the agreement protects your interests and will be accepted by Services Australia for registration.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Debt & Enforcement</h3>
+          <p>Whether you're owed unpaid child support or facing enforcement action, we help navigate the options — from payment arrangements to tax refund interceptions.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Objections & Tribunal</h3>
+          <p>Prepare formal objections to Services Australia decisions and, if needed, comprehensive submissions for the Administrative Review Tribunal.</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Overseas Matters</h3>
+          <p>International child support cases involving countries with reciprocal agreements. One of Simon's published specialities ("The fog of overseas child support," 2016).</p>
+        </div>
+        <div class="expertise-card">
+          <h3>Tax & Child Support</h3>
+          <p>The intersection of taxation and child support — maintenance trusts, non-agency payments, PSI rules, and lump sum arrangements. A niche area where specialist knowledge is essential.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="gold-line"></div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div style="max-width: 720px;">
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Who is Melbourne's most experienced child support expert?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Simon Bacon has over 35 years of exclusive specialisation in child support — one of the longest and most focused careers in this field in Australia. Based at Normanby Chambers in Melbourne's CBD, he has published 8 peer-reviewed articles and is a regular guest expert on the Tax Talks podcast.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">How is a child support expert different from a family lawyer?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">A child support expert focuses exclusively on child support matters. Most family lawyers handle child support as a small part of a broader practice. The depth of specialisation means a child support expert understands nuances and strategies that generalist practitioners may miss — and charges less because the advisory model doesn't carry the overhead of a full law firm.</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Can I meet Simon in person in Melbourne?</h3>
+          <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7;">Yes. Simon is based at Normanby Chambers, 430 Little Collins Street, Melbourne VIC 3000 — in the heart of Melbourne's legal precinct. In-person consultations are available by appointment, along with phone and video options for those who prefer remote meetings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <div class="gold-line" style="margin-left: auto; margin-right: auto;"></div>
+      <h2 class="section-title">Speak with Melbourne's Child Support Expert</h2>
+      <p style="color: var(--color-gray); max-width: 500px; margin: 0 auto 2rem; font-size: 1.05rem;">
+        Free initial consultation — in person at Normanby Chambers, or via phone or video.
+      </p>
+      <a href="/contact" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>
