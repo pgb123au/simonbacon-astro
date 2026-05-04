@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import siteData from '../../content/site.json';
 
 interface Props {
   title: string;
@@ -9,8 +10,18 @@ interface Props {
 }
 
 const { title, description, canonical = 'https://simonbacon.com.au/', ogType = 'website' } = Astro.props;
+const isAdmin = Astro.url.pathname.startsWith('/admin');
 
-import siteData from '../../content/site.json';
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://simonbacon.com.au/#website",
+  "url": "https://simonbacon.com.au/",
+  "name": "Simon Bacon — Child Support Consultant",
+  "description": "Australian child support advisory services from one of the field's longest-serving specialists.",
+  "inLanguage": "en-AU",
+  "publisher": { "@id": "https://simonbacon.com.au/#person" }
+};
 ---
 <!DOCTYPE html>
 <html lang="en-AU">
@@ -33,6 +44,8 @@ import siteData from '../../content/site.json';
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231E1E2E'/><text x='16' y='22' text-anchor='middle' fill='%23C9A96E' font-family='Georgia' font-size='18' font-weight='bold'>S</text></svg>">
 
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
   <slot name="head" />
 </head>
 <body>
@@ -44,9 +57,9 @@ import siteData from '../../content/site.json';
         <li><a href="/#career">Career</a></li>
         <li><a href="/#expertise">Expertise</a></li>
         <li><a href="/#media">Media</a></li>
-        <li><a href="/publications">Publications</a></li>
-        <li><a href="/child-support-expert-melbourne">Melbourne</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/child-support-expert-melbourne/">Melbourne</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -57,43 +70,21 @@ import siteData from '../../content/site.json';
   <slot />
 
   <footer class="site-footer">
-    <nav style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; font-size: 0.8rem;">
-      <a href="/child-support-expert-melbourne">Melbourne</a>
-      <a href="/child-support-expert-sydney">Sydney</a>
-      <a href="/child-support-expert-brisbane">Brisbane</a>
-      <a href="/child-maintenance-advisory">Maintenance</a>
-      <a href="/child-support-assessment-review">Assessment Reviews</a>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/child-support-expert-melbourne/">Melbourne</a>
+      <a href="/child-support-expert-sydney/">Sydney</a>
+      <a href="/child-support-expert-brisbane/">Brisbane</a>
+      <a href="/child-maintenance-advisory/">Maintenance</a>
+      <a href="/child-support-assessment-review/">Assessment Reviews</a>
     </nav>
     <p>{siteData.footer.copyright}</p>
-    <p style="margin-top: 0.5rem;">{siteData.footer.disclaimer}</p>
+    <p class="footer-disclaimer">{siteData.footer.disclaimer}</p>
+    <p class="footer-practice">
+      For full practice details visit <a href="https://www.childsupportlawyers.com.au/" rel="noopener">childsupportlawyers.com.au</a>.
+    </p>
   </footer>
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var toggle = document.getElementById('navToggle');
-      var links = document.getElementById('navLinks');
-      if (toggle && links) {
-        toggle.addEventListener('click', function() {
-          links.classList.toggle('open');
-        });
-        links.querySelectorAll('a').forEach(function(item) {
-          item.addEventListener('click', function() {
-            links.classList.remove('open');
-          });
-        });
-      }
-    });
-    // Redirect to /admin/ after Netlify Identity login
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', function(user) {
-        if (!user) {
-          window.netlifyIdentity.on('login', function() {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
-  </script>
+  <script src="/scripts/nav.js" is:inline></script>
+  {isAdmin && <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>}
 </body>
 </html>

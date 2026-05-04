@@ -9,10 +9,9 @@ const description = "Simon Bacon is Melbourne's leading child support expert. 35
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://simonbacon.com.au/#person",
-      "name": "Simon Bacon",
-      "jobTitle": "Child Support Consultant",
+      "@type": "ProfessionalService",
+      "@id": "https://simonbacon.com.au/child-support-expert-melbourne/#service",
+      "name": "Simon Bacon — Child Support Expert (Melbourne)",
       "description": description,
       "url": "https://simonbacon.com.au/child-support-expert-melbourne/",
       "telephone": siteData.contact.phoneLink,
@@ -25,13 +24,8 @@ const description = "Simon Bacon is Melbourne's leading child support expert. 35
         "postalCode": "3000",
         "addressCountry": "AU"
       },
-      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Melbourne" },
-      "knowsAbout": ["Child Support Law", "Child Support Agreements", "Child Support Assessment", "Family Law", "Administrative Law"],
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Child Support Consultant",
-        "occupationLocation": { "@type": "City", "name": "Melbourne" }
-      }
+      "areaServed": { "@type": "City", "name": "Melbourne" },
+      "provider": { "@id": "https://simonbacon.com.au/#person" }
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -193,7 +187,7 @@ const description = "Simon Bacon is Melbourne's leading child support expert. 35
       <p style="color: var(--color-gray); max-width: 500px; margin: 0 auto 2rem; font-size: 1.05rem;">
         Free initial consultation — in person at Normanby Chambers, or via phone or video.
       </p>
-      <a href="/contact" class="hero-cta">Contact Simon</a>
+      <a href="/contact/" class="hero-cta">Contact Simon</a>
     </div>
   </section>
 </Layout>

@@ -71,11 +71,19 @@ import siteData from '../../content/site.json';
             </div>
             <div class="contact-detail">
               <div class="contact-detail-label">Office</div>
-              <div class="contact-detail-value" set:html={siteData.contact.office.replace(/\n/g, '<br>')} />
+              <div class="contact-detail-value">
+                {siteData.contact.office.split('\n').map((line: string, i: number) => (
+                  <>{i > 0 && <br />}{line}</>
+                ))}
+              </div>
             </div>
             <div class="contact-detail">
               <div class="contact-detail-label">Hours</div>
-              <div class="contact-detail-value" set:html={siteData.contact.hours.replace(/\n/g, '<br>')} />
+              <div class="contact-detail-value">
+                {siteData.contact.hours.split('\n').map((line: string, i: number) => (
+                  <>{i > 0 && <br />}{line}</>
+                ))}
+              </div>
             </div>
             <div class="contact-detail">
               <div class="contact-detail-label">Consultations</div>

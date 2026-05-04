@@ -1,13 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 
 Sitemap: https://simonbacon.com.au/sitemap.xml
 
 User-agent: GPTBot
 Allow: /
+Disallow: /admin/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
