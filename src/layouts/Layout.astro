@@ -37,6 +37,22 @@ const websiteSchema = {
   <meta property="og:description" content={description}>
   <meta property="og:url" content={canonical}>
   <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="Simon Bacon">
+  <meta property="og:image" content="https://simonbacon.com.au/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://simonbacon.com.au/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Simon Bacon — Child Support Consultant, Normanby Chambers, Melbourne">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content="https://simonbacon.com.au/og-image.jpg">
+
+  <meta name="author" content="Simon Bacon">
+  <meta name="theme-color" content="#1E1E2E">
+  <link rel="alternate" hreflang="en-au" href={canonical}>
+  <link rel="alternate" hreflang="x-default" href={canonical}>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +96,7 @@ const websiteSchema = {
     <p>{siteData.footer.copyright}</p>
     <p class="footer-disclaimer">{siteData.footer.disclaimer}</p>
     <p class="footer-practice">
-      For full practice details visit <a href="https://www.childsupportlawyers.com.au/" rel="noopener">childsupportlawyers.com.au</a>.
+      <a href="/privacy/" rel="noopener">Privacy</a> · For full practice details visit <a href="https://www.childsupportlawyers.com.au/" rel="me noopener">childsupportlawyers.com.au</a>.
     </p>
   </footer>
 

@@ -5,15 +5,23 @@ import siteData from '../../content/site.json';
 <Layout
   title="Contact Simon Bacon | Child Support Advisory"
   description="Contact Simon Bacon for child support advisory services. Free initial consultation available. Melbourne-based, Australia-wide service."
-  canonical="https://simonbacon.com.au/contact"
+  canonical="https://simonbacon.com.au/contact/"
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": "Contact Simon Bacon",
-      "url": "https://simonbacon.com.au/contact",
+      "url": "https://simonbacon.com.au/contact/",
       "mainEntity": { "@id": "https://simonbacon.com.au/#person" }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://simonbacon.com.au/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://simonbacon.com.au/contact/" }
+      ]
     })} />
   </Fragment>
 
