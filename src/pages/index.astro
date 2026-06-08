@@ -4,13 +4,14 @@ import siteData from '../../content/site.json';
 import careerData from '../../content/career.json';
 import expertiseData from '../../content/expertise.json';
 import mediaData from '../../content/media.json';
+const buildDate = new Date().toISOString().split('T')[0];
 ---
 <Layout title={siteData.seo.title} description={siteData.seo.description} ogType="profile">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ProfilePage",
-      "dateModified": "2026-05-14",
+      "dateModified": buildDate,
       "mainEntity": {
         "@type": "Person",
         "@id": "https://simonbacon.com.au/#person",
@@ -51,7 +52,7 @@ import mediaData from '../../content/media.json';
           "https://www.youtube.com/channel/UC48GxBaQC_dmC0oLEqPH8iw",
           "https://soundcloud.com/simon-bacon-428540434"
         ],
-        "dateModified": "2026-05-14"
+        "dateModified": buildDate
       }
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -103,8 +104,10 @@ import mediaData from '../../content/media.json';
         </div>
       </div>
       <div>
-        <img src="/images/simon-bacon-office.jpg" alt="Simon Bacon at his Normanby Chambers office, Melbourne" width="600" height="800" loading="lazy" decoding="async">
-        <p>{siteData.about.imageCaption}</p>
+        <figure>
+          <img src="/images/simon-bacon-office.jpg" alt="Simon Bacon at his Normanby Chambers office, Melbourne" width="600" height="800" loading="lazy" decoding="async">
+          <figcaption>{siteData.about.imageCaption}</figcaption>
+        </figure>
       </div>
     </div>
   </section>

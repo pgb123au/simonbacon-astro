@@ -23,17 +23,30 @@ import pubData from '../../content/publications.json';
       "url": "https://simonbacon.com.au/publications/",
       "mainEntity": {
         "@type": "ItemList",
-        "itemListElement": pubData.familyLawReview.articles.map((a: { year: string; title: string; journal: string }, i: number) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "headline": a.title,
-            "author": { "@id": "https://simonbacon.com.au/#person" },
-            "datePublished": a.year,
-            "isPartOf": { "@type": "Periodical", "name": "Family Law Review", "publisher": { "@type": "Organization", "name": "Thomson Reuters" } }
+        "itemListElement": [
+          ...pubData.familyLawReview.articles.map((a: { year: string; title: string; journal: string }, i: number) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "item": {
+              "@type": "ScholarlyArticle",
+              "headline": a.title,
+              "author": { "@id": "https://simonbacon.com.au/#person" },
+              "datePublished": a.year,
+              "isPartOf": { "@type": "Periodical", "name": "Family Law Review", "publisher": { "@type": "Organization", "name": "Thomson Reuters" } }
+            }
+          })),
+          {
+            "@type": "ListItem",
+            "position": pubData.familyLawReview.articles.length + 1,
+            "item": {
+              "@type": "ScholarlyArticle",
+              "headline": "Depreciation and child support",
+              "author": { "@id": "https://simonbacon.com.au/#person" },
+              "datePublished": "2005",
+              "isPartOf": { "@type": "Periodical", "name": "Law Institute Journal", "publisher": { "@type": "Organization", "name": "Law Institute of Victoria" } }
+            }
           }
-        }))
+        ]
       }
     })} />
   </Fragment>

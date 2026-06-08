@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../../content/site.json';
+---
+<Layout
+  title="Privacy Policy | Simon Bacon Child Support Advisory"
+  description="Privacy policy for simonbacon.com.au — how personal information collected via the contact form is handled by Simon Bacon Child Support Advisory."
+  canonical="https://simonbacon.com.au/privacy/"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy",
+      "url": "https://simonbacon.com.au/privacy/",
+      "isPartOf": { "@id": "https://simonbacon.com.au/#website" }
+    })} />
+  </Fragment>
+
+  <div class="page-header">
+    <h1>Privacy Policy</h1>
+    <p>How we handle your personal information</p>
+  </div>
+
+  <section class="section">
+    <div class="section-inner" style="max-width: 760px;">
+
+      <div class="gold-line"></div>
+      <h2 class="section-title">Overview</h2>
+      <p>Simon Bacon Child Support Advisory (<strong>simonbacon.com.au</strong>) is committed to protecting the privacy of individuals who contact us. This policy explains what personal information we collect, how it is used, and with whom it may be shared. It is consistent with the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles.</p>
+
+      <div class="gold-line" style="margin-top: 2.5rem;"></div>
+      <h2 class="section-title">Information We Collect</h2>
+      <p>We collect personal information only when you choose to provide it, primarily through the contact form on this website. This may include:</p>
+      <ul style="color: var(--color-gray); line-height: 1.9; margin-bottom: 1.5rem;">
+        <li>Your name</li>
+        <li>Your email address</li>
+        <li>Your phone number (optional)</li>
+        <li>The content of your enquiry message</li>
+      </ul>
+      <p>We do not collect sensitive information (such as health or financial information) through this website unless you voluntarily include it in your enquiry message.</p>
+
+      <div class="gold-line" style="margin-top: 2.5rem;"></div>
+      <h2 class="section-title">How We Use Your Information</h2>
+      <p>Personal information you provide is used solely to:</p>
+      <ul style="color: var(--color-gray); line-height: 1.9; margin-bottom: 1.5rem;">
+        <li>Respond to your enquiry</li>
+        <li>Provide the advisory services you have requested</li>
+        <li>Maintain records of our engagement as required for professional practice</li>
+      </ul>
+      <p>We will not use your personal information for marketing, sell it to third parties, or share it with any party not involved in delivering our advisory services to you.</p>
+
+      <div class="gold-line" style="margin-top: 2.5rem;"></div>
+      <h2 class="section-title">Third-Party Form Processor</h2>
+      <p>The contact form on this website uses <strong>FormSubmit</strong> (<a href="https://formsubmit.co" target="_blank" rel="noopener">formsubmit.co</a>) to deliver your enquiry by email. When you submit the form, your submission data is processed by FormSubmit's servers before being forwarded to us. FormSubmit's own privacy policy governs the handling of that data during transit. We do not store form submissions on FormSubmit's servers beyond the delivery of the email notification.</p>
+
+      <div class="gold-line" style="margin-top: 2.5rem;"></div>
+      <h2 class="section-title">Data Security</h2>
+      <p>We take reasonable steps to protect personal information from misuse, loss, and unauthorised access. Enquiries received by email are handled confidentially and retained only for as long as necessary to respond to your matter and comply with professional obligations.</p>
+
+      <div class="gold-line" style="margin-top: 2.5rem;"></div>
+      <h2 class="section-title">Access and Correction</h2>
+      <p>You have the right to request access to personal information we hold about you, and to request corrections if it is inaccurate. To do so, please contact us using the details below.</p>
+
+      <div class="gold-line" style="margin-top: 2.5rem;"></div>
+      <h2 class="section-title">Contact</h2>
+      <p>For privacy-related enquiries, please contact:</p>
+      <p style="color: var(--color-gray); line-height: 1.9;">
+        Simon Bacon Child Support Advisory<br>
+        Normanby Chambers, 430 Little Collins Street, Melbourne VIC 3000<br>
+        Email: <a href={`mailto:${siteData.contact.email}`}>{siteData.contact.email}</a><br>
+        Phone: <a href={`tel:${siteData.contact.phoneLink}`}>{siteData.contact.phone}</a>
+      </p>
+
+    </div>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <div class="section-inner">
+      <a href="/" class="hero-cta" style="margin-right: 1rem;">← Back to Profile</a>
+      <a href="/contact/" class="hero-cta">Contact Simon</a>
+    </div>
+  </section>
+</Layout>
